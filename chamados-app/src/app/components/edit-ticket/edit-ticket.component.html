@@ -1,0 +1,12 @@
+<h2>Editar Chamado</h2>
+<form (ngSubmit)="editTicket()">
+  <div>
+    <label>Título:</label>
+    <input [(ngModel)]="ticket.title" name="title" required>
+  </div>
+  <div>
+    <label>Descrição:</label>
+    <textarea [(ngModel)]="ticket.description" name="description" required></textarea>
+  </div>
+  <button type="submit">Salvar</button>
+</form>

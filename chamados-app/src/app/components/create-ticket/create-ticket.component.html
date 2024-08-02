@@ -1,0 +1,12 @@
+<h2>Criar Chamado</h2>
+<form (ngSubmit)="createTicket()">
+  <div>
+    <label>Título:</label>
+    <input [(ngModel)]="ticket.title" name="title" required>
+  </div>
+  <div>
+    <label>Descrição:</label>
+    <textarea [(ngModel)]="ticket.description" name="description" required></textarea>
+  </div>
+  <button type="submit">Criar</button>
+</form>

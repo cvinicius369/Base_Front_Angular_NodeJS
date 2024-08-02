@@ -1,0 +1,7 @@
+<h2>Lista de Chamados</h2>
+<ul>
+  <li *ngFor="let ticket of tickets">
+    <a [routerLink]="['/view-ticket', ticket.id]">{{ ticket.title }}</a>
+  </li>
+</ul>
+<a routerLink="/create-ticket">Criar Novo Chamado</a>

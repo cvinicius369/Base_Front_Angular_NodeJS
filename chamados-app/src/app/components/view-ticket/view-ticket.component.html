@@ -1,0 +1,17 @@
+<h2>Detalhes do Chamado</h2>
+<div>
+  <h3>{{ ticket.title }}</h3>
+  <p>{{ ticket.description }}</p>
+  <a [routerLink]="['/edit-ticket', ticket.id]">Editar Chamado</a>
+</div>
+
+<h3>Upload de Arquivo</h3>
+<input type="file" (change)="onFileChanged($event)">
+<button (click)="uploadFile()">Enviar Arquivo</button>
+
+<h3>Download de Arquivo</h3>
+<ul>
+  <li *ngFor="let file of ticket.files">
+    <a (click)="downloadFile(file)">{{ file }}</a>
+  </li>
+</ul>
